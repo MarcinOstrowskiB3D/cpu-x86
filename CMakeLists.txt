@@ -11,32 +11,20 @@ endif()
 
 add_subdirectory(src/x86)
 
-install(TARGETS core
-    EXPORT ${PROJECT_NAME}Targets
+install(TARGETS cpu-x86
+    EXPORT ${PROJECT_NAME}Config
     FILE_SET HEADERS
     LIBRARY DESTINATION lib
     ARCHIVE DESTINATION lib
     RUNTIME DESTINATION bin
     INCLUDES DESTINATION include)
 	
-install(EXPORT ${PROJECT_NAME}Targets
-    FILE ${PROJECT_NAME}Targets.cmake
-    NAMESPACE ${PROJECT_NAME}::
-    DESTINATION lib/cmake/${PROJECT_NAME})	
-	
-set(GENERATED_CONFIG_FILE_DIR "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}Config.cmake")
-	
-configure_file(
-"${CMAKE_CURRENT_SOURCE_DIR}/cmake/config.cmake.in"
-"${GENERATED_CONFIG_FILE_DIR}"
-@ONLY
+export(TARGETS cpu-x86
+	NAMESPACE ${PROJECT_NAME}::
+	FILE "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}Config.cmake"
 )
-
-include(CMakePackageConfigHelpers)
-write_basic_package_version_file(
-    "${PROJECT_NAME}ConfigVersion.cmake"
-    VERSION ${MC_VERSION}
-    COMPATIBILITY AnyNewerVersion)
-
-install(FILES "${GENERATED_CONFIG_FILE_DIR}" "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}ConfigVersion.cmake"
-    DESTINATION lib/cmake/${PROJECT_NAME})	
+	
+install(EXPORT ${PROJECT_NAME}Config
+	DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/${PROJECT_NAME}"
+	NAMESPACE ${PROJECT_NAME}::
+)
