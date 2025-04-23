@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.1.1](https://github.com/B3DScanner/cpu-x86/compare/v1.1.0...v1.1.1) (2025-04-23)
+
+
+### Bug Fixes
+
+* Added the missing hasAVX2() function to the cpu_x86.h file. ([5e37980](https://github.com/B3DScanner/cpu-x86/commit/5e379803773fbc7200b973f5837aa8d92dc98bfc))
+
 # [1.1.0](https://github.com/B3DScanner/cpu-x86/compare/v1.0.0...v1.1.0) (2025-04-23)
 
 
