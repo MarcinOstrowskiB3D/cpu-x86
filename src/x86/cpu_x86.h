@@ -101,6 +101,8 @@ struct cpu_x86{
 public:
     cpu_x86();
     void detect_host();
+	
+	bool hasAVX2();
 
     void print() const;
     static void print_host();
