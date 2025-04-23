@@ -88,6 +88,33 @@ std::string cpu_x86::get_vendor_string(){
 
     return name;
 }
+std::string cpu_x86::get_cpu_brand_string()
+{
+    int32_t CPUInfo[4];
+    char CPUBrandString[0x40];
+    memset(CPUBrandString, 0, sizeof(CPUBrandString));
+
+    __cpuid(CPUInfo, 0x80000000);
+    unsigned int nExIds = CPUInfo[0];
+
+    auto n = std::min<unsigned int>(nExIds, 0x80000004);
+
+    for (unsigned int i = 0x80000002; i <= n; ++i) {
+        __cpuid(CPUInfo, i);
+
+        if (i == 0x80000002)
+            memcpy(CPUBrandString, CPUInfo, sizeof(CPUInfo));
+        else if (i == 0x80000003)
+            memcpy(CPUBrandString + 16, CPUInfo, sizeof(CPUInfo));
+        else if (i == 0x80000004)
+            memcpy(CPUBrandString + 32, CPUInfo, sizeof(CPUInfo));
+
+    }
+
+    return std::string(CPUBrandString, CPUBrandString + 0x40);
+}
+
+
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
@@ -181,7 +208,18 @@ void cpu_x86::detect_host(){
         HW_XOP   = (info[2] & ((int)1 << 11)) != 0;
         HW_PREFETCHW = (info[2] & ((int)1 << 8)) != 0;
     }
+	
+	hostDetected_ = true;
 }
+
+bool cpu_x86::hasAVX2()
+{
+    if (!hostDetected_) {
+        detect_host();
+    }
+    return this->HW_AVX2;
+}
+
 void cpu_x86::print() const{
     cout << "CPU Vendor:" << endl;
     print("    AMD         = ", Vendor_AMD);

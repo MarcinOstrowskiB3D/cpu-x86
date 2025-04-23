@@ -107,6 +107,8 @@ public:
 
     static void cpuid(int32_t out[4], int32_t eax, int32_t ecx);
     static std::string get_vendor_string();
+	
+	static std::string get_cpu_brand_string();
 
 private:
     static void print(const char* label, bool yes);
@@ -114,6 +116,8 @@ private:
     static bool detect_OS_x64();
     static bool detect_OS_AVX();
     static bool detect_OS_AVX512();
+	
+	bool hostDetected_ = false;
 };
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
