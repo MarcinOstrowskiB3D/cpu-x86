@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file.
 
+# [1.2.0](https://github.com/MarcinOstrowskiB3D/cpu-x86/compare/v1.1.1...v1.2.0) (2025-05-09)
+
+
+### Bug Fixes
+
+* **CMake:** Deleted new file ([6728dfe](https://github.com/MarcinOstrowskiB3D/cpu-x86/commit/6728dfeca44ff35a49c0b2f1d2fc65492d1d24c6))
+* **CMake:** Removed test.txt from repo ([85d1d69](https://github.com/MarcinOstrowskiB3D/cpu-x86/commit/85d1d698466a0f40902abdd7901eae3f4d9e09d4))
+
+
+### Features
+
+* **CMake:** Added new file ([8f228f6](https://github.com/MarcinOstrowskiB3D/cpu-x86/commit/8f228f65ac41c11ab3190e55a864ce5a9bac7a5a))
+* **CMake:** Added test.txt to repo ([00ff40f](https://github.com/MarcinOstrowskiB3D/cpu-x86/commit/00ff40ff815c6a6c925cf068243041dfd87474fa))
+* **CMake:** Added test.txt to repo ([86e9901](https://github.com/MarcinOstrowskiB3D/cpu-x86/commit/86e9901abc570e5e5635e8407d8784ffe71278ce))
+* **CMake:** Removed test.txt to repo ([7087265](https://github.com/MarcinOstrowskiB3D/cpu-x86/commit/708726554f1890244f5eedb268fcce9e5a8931e0))
+
 ## [1.1.1](https://github.com/B3DScanner/cpu-x86/compare/v1.1.0...v1.1.1) (2025-04-23)
 
 
