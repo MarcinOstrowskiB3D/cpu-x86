@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.4.1](https://github.com/MarcinOstrowskiB3D/cpu-x86/compare/v1.4.0...v1.4.1) (2025-05-09)
+
+
+### Bug Fixes
+
+* **CMake:** Deleted doc.md ([42be5ea](https://github.com/MarcinOstrowskiB3D/cpu-x86/commit/42be5eae11a46effe5da5fa9be7e97f1c382d472))
+
 # [1.4.0](https://github.com/MarcinOstrowskiB3D/cpu-x86/compare/v1.3.0...v1.4.0) (2025-05-09)
 
 
