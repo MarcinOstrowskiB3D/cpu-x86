@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+# [1.3.0](https://github.com/MarcinOstrowskiB3D/cpu-x86/compare/v1.2.0...v1.3.0) (2025-05-09)
+
+
+### Features
+
+* **CMake:** added test.txt file to cpu-x86 repo ([c164d4e](https://github.com/MarcinOstrowskiB3D/cpu-x86/commit/c164d4e75eca5f583a5751e607562e5d28de8fe0))
+
 # [1.2.0](https://github.com/MarcinOstrowskiB3D/cpu-x86/compare/v1.1.1...v1.2.0) (2025-05-09)
 
 
