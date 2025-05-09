@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
+# [1.4.0](https://github.com/MarcinOstrowskiB3D/cpu-x86/compare/v1.3.0...v1.4.0) (2025-05-09)
+
+
+### Bug Fixes
+
+* **cmake:** removed test.txt ([6de75af](https://github.com/MarcinOstrowskiB3D/cpu-x86/commit/6de75afc5a93b9f0a25d8ba3a7a604126ef01238))
+
+
+### Features
+
+* **cmake:** Added comment to CMakeLists.txt ([2a3fcc1](https://github.com/MarcinOstrowskiB3D/cpu-x86/commit/2a3fcc1cc6c273f182673c587ea935c2a7480292))
+
 # [1.3.0](https://github.com/MarcinOstrowskiB3D/cpu-x86/compare/v1.2.0...v1.3.0) (2025-05-09)
 
 
