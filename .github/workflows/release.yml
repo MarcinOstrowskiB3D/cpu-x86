@@ -13,6 +13,30 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+        
+      - name: Import GPG key
+        run: |
+          echo "${{ secrets.GPG_PRIVATE_KEY }}" | gpg --batch --import
+          echo "use-agent" >> ~/.gnupg/gpg.conf
+          echo "pinentry-mode loopback" >> ~/.gnupg/gpg.conf
+          echo "allow-loopback-pinentry" >> ~/.gnupg/gpg-agent.conf
+          echo RELOADAGENT | gpg-connect-agent
+        shell: bash
+        
+      - name: Unlock GPG key
+        run: |
+          echo "${{ secrets.GPG_PASSPHRASE }}" | \
+          gpg --batch --yes --passphrase-fd 0 \
+          --pinentry-mode loopback \
+          --sign --output /dev/null --detach-sig <<< "dummy"        
+
+      - name: Set Git to sign commits
+        run: |
+          git config --global user.name "B3D CI/CD"
+          git config --global user.email "mo@b3d.com.pl"
+          git config --global commit.gpgsign true
+          git config --global user.signingkey 1BBE0FE0B65C2C04
+          git config --global gpg.program gpg        
 
       - name: Setup Node.js
         uses: actions/setup-node@v2
