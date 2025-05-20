@@ -1,27 +1,34 @@
 {
-    "branches": [
-		{name: "master"}
+  "branches": [
+    { "name": "master" }
+  ],
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    [
+      "@semantic-release/changelog",
+      {
+        "changelogFile": "CHANGELOG.md",
+        "changelogTitle": "# Changelog\n\nAll notable changes to this project will be documented in this file."
+      }
+    ],
+    [
+      "semantic-release-github-pullrequest",
+      {
+        "title": "chore(release): ${nextRelease.version}",
+        "message": "chore(release): ${nextRelease.version}\n\n${nextRelease.notes}",
+        "base": "master"
+      }
+    ],
+    [
+      "@semantic-release/git",
+      {
+        "assets": [
+          "CHANGELOG.md"
         ],
-    "plugins": [
-        "@semantic-release/commit-analyzer",
-        "@semantic-release/release-notes-generator",
-        [
-            "@semantic-release/changelog",
-            {
-            "changelogFile": "CHANGELOG.md",
-            "changelogTitle": "# Changelog\n\nAll notable changes to this project will be documented in this file."
-            }
-        ],
-        "@semantic-release/github",
-        [
-            "@semantic-release/git",
-            {
-            "assets": [
-                "CHANGELOG.md" 
-            ],
-            "message": "chore(release): version ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}",
-			"sign": true
-            }
-        ]
+        "message": "chore(release): version ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}",
+        "sign": true
+      }
     ]
+  ]
 }
