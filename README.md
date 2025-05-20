@@ -3,7 +3,7 @@
 A simple app that detects what hardware features are supported by the host CPU and operating system.
 ewtwetwetewt
 -----
-
+werewr
 Sample output for a Haswell processor:
 
 ````
