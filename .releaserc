@@ -18,7 +18,11 @@
         "title": "chore(release): ${nextRelease.version}",
         "message": "chore(release): ${nextRelease.version}\n\n${nextRelease.notes}",
         "base": "master",
-        "branch": "release-pr-v${nextRelease.version}",
+        "branch": (context) => {
+          const branch = `release-pr-v${context.nextRelease.version.replace(/\./g, '-')}`;
+          console.log('[debug] Using branch:', branch);
+          return branch;
+        },
         "sign": true
       }
     ],
