@@ -21,15 +21,7 @@ jobs:
           echo "pinentry-mode loopback" >> ~/.gnupg/gpg.conf
           echo "allow-loopback-pinentry" >> ~/.gnupg/gpg-agent.conf
           echo RELOADAGENT | gpg-connect-agent
-        shell: bash
-        
-      - name: Unlock GPG key
-        run: |
-          echo "${{ secrets.GPG_PASSPHRASE }}" | \
-          gpg --batch --yes --passphrase-fd 0 \
-          --pinentry-mode loopback \
-          --sign --output /dev/null --detach-sig <<< "dummy"        
-
+        shell: bash           
       - name: Set Git to sign commits
         run: |
           git config --global user.name "B3D CI/CD"
