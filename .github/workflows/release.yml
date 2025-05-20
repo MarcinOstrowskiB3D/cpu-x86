@@ -51,3 +51,4 @@ jobs:
             ['master']
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          DEBUG: semantic-release:*,semantic-release-github-pullrequest*
