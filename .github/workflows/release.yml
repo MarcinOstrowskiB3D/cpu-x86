@@ -34,6 +34,11 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: '14'
+          
+      - name: Create minimal package.json and install pull-request plugin
+        run: |
+          echo '{}' > package.json
+          npm install --save-dev semantic-release-github-pullrequest          
 
       - name: Release to GitHub
         uses: cycjimmy/semantic-release-action@v2.5.4
