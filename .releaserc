@@ -18,6 +18,7 @@
         "title": "chore(release): ${nextRelease.version}",
         "message": "chore(release): ${nextRelease.version}\n\n${nextRelease.notes}",
         "base": "master",
+        "branch": "release-pr-${nextRelease.version}",
         "sign": true
       }
     ],
