@@ -6,7 +6,9 @@ on:
     branches: [master]
 
 permissions:
-  contents: write    # potrzebne do wypchnięcia taga i utworzenia Release
+  contents: write         # pozwala na odczyt/zapis kodu i tagów
+  issues: write           # pozwala na komentowanie issue/pr
+  pull-requests: write    # pozwala na modyfikowanie PR
 
 jobs:
   release:
