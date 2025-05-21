@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.4.2](https://github.com/MarcinOstrowskiB3D/cpu-x86/compare/v1.4.1...v1.4.2) (2025-05-21)
+
+
+### Bug Fixes
+
+* **CMake:** Added test.txt to repository ([0d8c599](https://github.com/MarcinOstrowskiB3D/cpu-x86/commit/0d8c59926e9ec5d846c1fead264e52967e4529b2))
+* **CMake:** deleted test.txt from repository ([54ca0f8](https://github.com/MarcinOstrowskiB3D/cpu-x86/commit/54ca0f8d93e726b52004b0607b1aab53c2ac01c4))
+* **CMake:** deleted test.txt from repository ([8f42067](https://github.com/MarcinOstrowskiB3D/cpu-x86/commit/8f420678182a51f3a180357a33b240b4528638ce))
+* **Docs:** Restored readme file name ([ad8d34f](https://github.com/MarcinOstrowskiB3D/cpu-x86/commit/ad8d34f68f676762ef049bdc6dfca370f9cf8e7d))
+* **Docs:** test ([866a7ab](https://github.com/MarcinOstrowskiB3D/cpu-x86/commit/866a7ab35149e09fa731c8cd66f87c0e53bca332))
+* **Docs:** tewtewtwewt ([906cf7a](https://github.com/MarcinOstrowskiB3D/cpu-x86/commit/906cf7a94700cc62fd214441b1be4923df98d3f8))
+* **Docs:** Update .releaserc.js ([f460333](https://github.com/MarcinOstrowskiB3D/cpu-x86/commit/f4603334e7cd9c08e952f80713450a1b2154e939))
+* **Docs:** Update and rename .releaserc to .releaserc.js ([8ae1873](https://github.com/MarcinOstrowskiB3D/cpu-x86/commit/8ae187321ed1a4b108ceb3c3142f9776ff8a1a8f))
+* **Docs:** Update README.md ([18dd962](https://github.com/MarcinOstrowskiB3D/cpu-x86/commit/18dd962f67954ea8ec715327cc2f3aed1ad584e0))
+
 ## [1.4.1](https://github.com/MarcinOstrowskiB3D/cpu-x86/compare/v1.4.0...v1.4.1) (2025-05-09)
 
 
