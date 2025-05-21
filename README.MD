@@ -6,7 +6,7 @@ ewtwetwetewt
 werewr
 Sample output for a Haswell processor:
 
-````werewr
+````werewetwettewr
 CPU Vendor String: GenuineIntel
 wettwetwe
 CPU Vendor:
