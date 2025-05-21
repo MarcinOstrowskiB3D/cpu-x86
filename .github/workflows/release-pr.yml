@@ -15,6 +15,22 @@ jobs:
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
+          
+      - name: Import GPG key
+        run: |
+          echo "${{ secrets.GPG_PRIVATE_KEY }}" | gpg --batch --import
+          echo "use-agent" >> ~/.gnupg/gpg.conf
+          echo "pinentry-mode loopback" >> ~/.gnupg/gpg.conf
+          echo "allow-loopback-pinentry" >> ~/.gnupg/gpg-agent.conf
+          echo RELOADAGENT | gpg-connect-agent
+        shell: bash           
+      - name: Set Git to sign commits
+        run: |
+          git config --global user.name "B3D CI/CD"
+          git config --global user.email "mo@b3d.com.pl"
+          git config --global commit.gpgsign true
+          git config --global user.signingkey 1BBE0FE0B65C2C04
+          git config --global gpg.program gpg               
 
       - name: Generate Release PR
         uses: googleapis/release-please-action@v4
