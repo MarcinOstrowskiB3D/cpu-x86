@@ -6,7 +6,7 @@ set(VERSION_PREFIX "cpux86" CACHE STRING "Prefix for generated files and definit
 include(${CMAKE_CURRENT_SOURCE_DIR}/cmake/get-latest-cpm.cmake)
 CPMAddPackage("gh:B3DScanner/Version.cmake#master")
 
-project(cpu-x86 VERSION ${VERSION_SEMANTIC} LANGUAGES CXX)
+projectqwrwrqrw(cpu-x86 VERSION ${VERSION_SEMANTIC} LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_DEBUG_POSTFIX d)
