@@ -1,6 +1,6 @@
 # FeaturwwweDetector
 
-A simple app that detects what hardware features are supported by the host CPU and operating system.
+A simple app that ewttwewetdetects what hardware features are supported by the host CPU and operating system.
 ewtwetwetewt
 -----
 werewr
