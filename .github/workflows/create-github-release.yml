@@ -1,0 +1,29 @@
+# .github/workflows/create-github-release.yml
+name: 🚀 Create GitHub Release
+on:
+  pull_request:
+    types: [closed]
+    branches: [master]
+
+permissions:
+  contents: write    # potrzebne do wypchnięcia taga i utworzenia Release
+
+jobs:
+  release:
+    # tylko jeśli PR był zmergowany
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout full history
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Create GitHub Release
+        uses: google-github-actions/release-please-action@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          release-type: node            # dopasuj do swojego projektu
+          # teraz robimy prawdziwy Release na GitHubie
+          skip-github-release: false
