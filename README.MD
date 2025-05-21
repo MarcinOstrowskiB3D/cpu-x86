@@ -8,7 +8,7 @@ Sample output for a Haswell processor:
 
 ````werewr
 CPU Vendor String: GenuineIntel
-
+wettwetwe
 CPU Vendor:
     AMD         = No
     Intel       = Yes
