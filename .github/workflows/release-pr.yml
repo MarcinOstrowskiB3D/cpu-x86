@@ -6,6 +6,7 @@ on:
 permissions:
   contents: write
   pull-requests: write
+  issues: write      # pozwala zarządzać labelami i innymi issue-related zasobami
 
 jobs:
   release-pr:
