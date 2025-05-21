@@ -1,0 +1,26 @@
+{
+  "branches": [
+    { "name": "master" }
+  ],
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    [
+      "@semantic-release/changelog",
+      {
+        "changelogFile": "CHANGELOG.md",
+        "changelogTitle": "# Changelog\n\nAll notable changes to this project will be documented in this file."
+      }
+    ],
+    [
+      "semantic-release-github-pullrequest",
+      {
+        "title": "chore(release): ${nextRelease.version}",
+        "message": "chore(release): ${nextRelease.version}\n\n${nextRelease.notes}",
+        "base": "master",
+        "branch": "v${nextRelease.version}",
+        "sign": true
+      }
+    ],
+  ]
+}
